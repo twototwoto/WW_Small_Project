@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		21472E7B1DFC38A100DB8F76 /* WYWCategoryVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 21472E7A1DFC38A100DB8F76 /* WYWCategoryVC.m */; };
+		21472E7F1DFC38F100DB8F76 /* WYWPopoverView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 21472E7E1DFC38F100DB8F76 /* WYWPopoverView.xib */; };
+		21472E821DFC3AF600DB8F76 /* WYWPopoverView.m in Sources */ = {isa = PBXBuildFile; fileRef = 21472E811DFC3AF600DB8F76 /* WYWPopoverView.m */; };
 		218F68441DFA454D00A0E88D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 218F68431DFA454D00A0E88D /* main.m */; };
 		218F68471DFA454D00A0E88D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 218F68461DFA454D00A0E88D /* AppDelegate.m */; };
 		218F686A1DFA566400A0E88D /* categories.plist in Resources */ = {isa = PBXBuildFile; fileRef = 218F68661DFA566400A0E88D /* categories.plist */; };
@@ -24,6 +27,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		21472E791DFC38A100DB8F76 /* WYWCategoryVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYWCategoryVC.h; sourceTree = "<group>"; };
+		21472E7A1DFC38A100DB8F76 /* WYWCategoryVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYWCategoryVC.m; sourceTree = "<group>"; };
+		21472E7E1DFC38F100DB8F76 /* WYWPopoverView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WYWPopoverView.xib; sourceTree = "<group>"; };
+		21472E801DFC3AF600DB8F76 /* WYWPopoverView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYWPopoverView.h; sourceTree = "<group>"; };
+		21472E811DFC3AF600DB8F76 /* WYWPopoverView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYWPopoverView.m; sourceTree = "<group>"; };
 		218F683F1DFA454C00A0E88D /* WYWMT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WYWMT.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		218F68431DFA454D00A0E88D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		218F68451DFA454D00A0E88D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -61,6 +69,42 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		21472E741DFC383900DB8F76 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				21472E7C1DFC38B800DB8F76 /* Model */,
+				21472E7D1DFC38B800DB8F76 /* View */,
+				21472E781DFC38A100DB8F76 /* Controller */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		21472E781DFC38A100DB8F76 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				21472E791DFC38A100DB8F76 /* WYWCategoryVC.h */,
+				21472E7A1DFC38A100DB8F76 /* WYWCategoryVC.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		21472E7C1DFC38B800DB8F76 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		21472E7D1DFC38B800DB8F76 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				21472E7E1DFC38F100DB8F76 /* WYWPopoverView.xib */,
+				21472E801DFC3AF600DB8F76 /* WYWPopoverView.h */,
+				21472E811DFC3AF600DB8F76 /* WYWPopoverView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		218F68361DFA454C00A0E88D = {
 			isa = PBXGroup;
 			children = (
@@ -114,6 +158,7 @@
 		218F686E1DFA76DB00A0E88D /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				21472E741DFC383900DB8F76 /* Category */,
 				218F686F1DFA76DB00A0E88D /* Home */,
 				218F68731DFA76DB00A0E88D /* Main */,
 			);
@@ -276,6 +321,7 @@
 				218F688B1DFAE4E500A0E88D /* WYWHomeView.xib in Resources */,
 				21CF952E1DFAF23E001FEC6D /* Assets.xcassets in Resources */,
 				218F686C1DFA566400A0E88D /* cityGroups.plist in Resources */,
+				21472E7F1DFC38F100DB8F76 /* WYWPopoverView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -291,6 +337,8 @@
 				218F68831DFA7A7900A0E88D /* NSString+HMCategory.m in Sources */,
 				21CF95311DFAFB15001FEC6D /* WYWHomeNavView.m in Sources */,
 				218F68471DFA454D00A0E88D /* AppDelegate.m in Sources */,
+				21472E7B1DFC38A100DB8F76 /* WYWCategoryVC.m in Sources */,
+				21472E821DFC3AF600DB8F76 /* WYWPopoverView.m in Sources */,
 				218F68841DFA7A7900A0E88D /* UIBarButtonItem+HMCategory.m in Sources */,
 				218F68441DFA454D00A0E88D /* main.m in Sources */,
 				218F687C1DFA776300A0E88D /* WYWNavC.m in Sources */,

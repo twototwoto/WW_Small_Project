@@ -8,6 +8,7 @@
 
 #import "WYWHomeCVC.h"
 #import "WYWHomeNavView.h"
+#import "WYWCategoryVC.h"
 
 @interface WYWHomeCVC ()
 
@@ -95,6 +96,15 @@ static NSString * const reuseIdentifier = @"Cell";
 #pragma mark - 分类item的点击方法
 - (void)clickCategoryItem{
     NSLog(@"点击了分类item");
+    
+    WYWCategoryVC *categoryVc = [[WYWCategoryVC alloc]init];
+    //设置modal类型 UIModalPresentationPopover
+    categoryVc.modalPresentationStyle = UIModalPresentationPopover;
+    UIPopoverPresentationController *popC =  categoryVc.popoverPresentationController;
+    //设置barButtonItem
+    popC.barButtonItem = self.navigationItem.leftBarButtonItems[1];
+    [self presentViewController:categoryVc animated:YES completion:nil];
+    
 }
 #pragma mark - 点击地图的item
 -(void)clickMapItem{
