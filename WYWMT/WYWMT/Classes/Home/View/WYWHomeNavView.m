@@ -24,5 +24,55 @@
     return [[NSBundle mainBundle]loadNibNamed:@"WYWHomeView" owner:nil options:nil].lastObject;
 }
 
+- (void)setIconName:(NSString *)iconName{
+    _iconName = iconName;
+    //设置图片
+    [self.navBtn setImage:[UIImage imageNamed: _iconName] forState:UIControlStateNormal];
+    
+}
+
+- (void)setIconHighLightedName:(NSString *)iconHighLightedName{
+    //设置高亮图片
+    _iconHighLightedName = iconHighLightedName;
+    [self.navBtn setImage:[UIImage imageNamed:_iconHighLightedName] forState:UIControlStateHighlighted];
+}
+/**
+//WWAnnotation:注意：我们设置的高亮图片如果是不能正常的显示的话有这么几种情况
+    1.相应的set方法没有正确地设置好
+    2.图片的渲染模式不对
+    3.相应的设置图片的方式不对
+    4.slice切图的时候不对
+ */
+//- (void)setIconHighLighLightedName:(NSString *)iconHighLightedName{
+//    //设置高亮图片
+//    _iconHighLightedName = iconHighLightedName;
+//    [self.navBtn setImage:[UIImage imageNamed:_iconHighLightedName] forState:UIControlStateHighlighted];
+//    
+//}
+
+- (void)setTitle:(NSString *)title{
+    _title = title;
+    _titleLabel.text = title;
+}
+
+- (void)setSubTitle:(NSString *)subTitle{
+    _subTitle = subTitle;
+    _subTitleLabel.text = _subTitle;
+}
+
+
+- (IBAction)clickNavBtn:(id)sender {
+    //生成Action-Target事件
+    [self sendActionsForControlEvents:UIControlEventTouchUpInside];
+}
+
+
+
+
+
+
+
+
+
 
 @end

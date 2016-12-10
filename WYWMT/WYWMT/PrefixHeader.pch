@@ -16,6 +16,11 @@
 
 //打印宏
 #ifdef DEBUG //在测试模式下使用自定义的打印
+
+//TODO:
+//WWAnnotation:有待修改的WYWLog
+//#define WYWLog(NSString * _Nonnull format, ...) fprintf(stderr,"%s:%d\t%s\n",[[[NSString stringWithUTF8String:__FILE__] lastPathComponent] UTF8String],__LINE__,[[NSString stringWithFormat:fmt,##VA_ARGS__] UTF8String])
+
 #define WYWLog(fmt,...) fprintf(stderr,"%s:%d\t%s\n",[[[NSString stringWithUTF8String:__FILE__] lastPathComponent] UTF8String],__LINE__,[[NSString stringWithFormat:fmt,##VA_ARGS__] UTF8String])
 #else   //打包后应该注释日志以提高运行速度，但是每行去掉注释太麻烦，可以根据该宏在Release 模式下取消打印日志
 #define WYWLog(...)

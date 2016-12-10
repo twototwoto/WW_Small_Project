@@ -8,7 +8,18 @@
 
 #import <UIKit/UIKit.h>
 
-@interface WYWHomeNavView : UIView
+//为了传递事件 使得自定义的导航视图继承自UIControl
+@interface WYWHomeNavView : UIControl
+
+//图片名
+@property(nonatomic,copy) NSString *iconName;
+//高亮的图片名
+@property(nonatomic,copy) NSString *iconHighLightedName;
+//主标题
+@property(nonatomic,copy) NSString *title;
+//副标题
+@property(nonatomic,copy) NSString *subTitle;
+
 + (instancetype)homeNavView;
 
 @end

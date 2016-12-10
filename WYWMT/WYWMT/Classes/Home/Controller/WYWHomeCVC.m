@@ -62,14 +62,40 @@ static NSString * const reuseIdentifier = @"Cell";
     
     //设置中间的item
     WYWHomeNavView *categoryView = [WYWHomeNavView homeNavView];
+    categoryView.iconHighLightedName = @"icon_category_highlighted_-1";
+    categoryView.iconName = @"icon_category_-1";
+    categoryView.title = @"全部分类";
+    categoryView.subTitle = nil;
+    //给categoryView添加事件处理
+    [categoryView addTarget:self action:@selector(clickCategoryItem) forControlEvents:UIControlEventTouchUpInside];
+    
     UIBarButtonItem *categoryItem = [[UIBarButtonItem alloc]initWithCustomView:categoryView];
     self.navigationItem.leftBarButtonItems = @[logoItem,categoryItem];
     
+    //设置地区
+    WYWHomeNavView *districtView = [WYWHomeNavView homeNavView];
+    districtView.iconHighLightedName = @"icon_district_highlighted";
+    districtView.iconName = @"icon_district";
+    districtView.title = @"北京-全部";
+    districtView.subTitle = nil;
+    UIBarButtonItem *districtItem = [[UIBarButtonItem alloc]initWithCustomView:districtView];
+    self.navigationItem.leftBarButtonItems = @[logoItem,categoryItem,districtItem];
     
+    //设置排序  默认排序
+    WYWHomeNavView *sortView = [WYWHomeNavView homeNavView];
+    sortView.iconHighLightedName = @"icon_sort_highlighted";
+    sortView.iconName = @"icon_sort";
+    sortView.title = @"排序";
+    sortView.subTitle = @"默认排序";
+    UIBarButtonItem *sortItem = [[UIBarButtonItem alloc]initWithCustomView:sortView];
+    self.navigationItem.leftBarButtonItems = @[logoItem,categoryItem,districtItem,sortItem];
+
     
 }
-
-
+#pragma mark - 分类item的点击方法
+- (void)clickCategoryItem{
+    NSLog(@"点击了分类item");
+}
 #pragma mark - 点击地图的item
 -(void)clickMapItem{
     NSLog(@"点击了地图的按钮");

@@ -21,15 +21,17 @@
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WSn-tt-7Kg">
                     <inset key="contentEdgeInsets" minX="5" minY="0.0" maxX="0.0" maxY="0.0"/>
                     <state key="normal" image="icon_category_-1"/>
-                    <state key="highlighted" image="icon_category_highlighted_-1"/>
+                    <connections>
+                        <action selector="clickNavBtn:" destination="iN0-l3-epB" eventType="touchUpInside" id="fdb-vn-Yzz"/>
+                    </connections>
                 </button>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="分类" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qZX-Go-RrC" userLabel="titleLabel">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" text="分类" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qZX-Go-RrC" userLabel="titleLabel">
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="子分类" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BeT-Mw-AHH">
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
@@ -37,18 +39,18 @@
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstAttribute="bottom" secondItem="WSn-tt-7Kg" secondAttribute="bottom" id="2Gk-W2-lSX"/>
-                <constraint firstItem="qZX-Go-RrC" firstAttribute="leading" secondItem="nVm-9x-s45" secondAttribute="trailing" constant="49" id="BBc-kA-ByQ"/>
-                <constraint firstAttribute="trailing" secondItem="qZX-Go-RrC" secondAttribute="trailing" id="DXy-Bs-IeY"/>
+                <constraint firstItem="BeT-Mw-AHH" firstAttribute="leading" secondItem="nVm-9x-s45" secondAttribute="trailing" constant="49" id="6Yb-0u-mdm"/>
+                <constraint firstAttribute="trailing" secondItem="qZX-Go-RrC" secondAttribute="trailing" id="BFO-4j-2Fo"/>
+                <constraint firstItem="qZX-Go-RrC" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="DsP-hs-mBQ"/>
                 <constraint firstAttribute="bottom" secondItem="nVm-9x-s45" secondAttribute="bottom" constant="5" id="EV7-Dd-HVs"/>
                 <constraint firstItem="nVm-9x-s45" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="5" id="GPx-j1-NoP"/>
-                <constraint firstItem="qZX-Go-RrC" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Jzg-Dj-S1N"/>
-                <constraint firstAttribute="bottom" secondItem="BeT-Mw-AHH" secondAttribute="bottom" id="QfD-Jx-scC"/>
+                <constraint firstAttribute="bottom" secondItem="BeT-Mw-AHH" secondAttribute="bottom" id="IYq-lv-1so"/>
+                <constraint firstAttribute="trailing" secondItem="BeT-Mw-AHH" secondAttribute="trailing" id="RaB-Cv-zgQ"/>
                 <constraint firstItem="nVm-9x-s45" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="5" id="S7B-Rc-k2f"/>
                 <constraint firstAttribute="trailing" secondItem="WSn-tt-7Kg" secondAttribute="trailing" id="dpD-RF-h51"/>
-                <constraint firstItem="qZX-Go-RrC" firstAttribute="height" secondItem="BeT-Mw-AHH" secondAttribute="height" id="eY9-k8-Gke"/>
-                <constraint firstAttribute="trailing" secondItem="BeT-Mw-AHH" secondAttribute="trailing" id="fHa-WL-IRe"/>
-                <constraint firstItem="qZX-Go-RrC" firstAttribute="width" secondItem="BeT-Mw-AHH" secondAttribute="width" id="fSc-kd-lsh"/>
                 <constraint firstItem="WSn-tt-7Kg" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="piu-5V-N3L"/>
+                <constraint firstItem="BeT-Mw-AHH" firstAttribute="top" secondItem="qZX-Go-RrC" secondAttribute="bottom" id="uZW-CO-JWC"/>
+                <constraint firstItem="qZX-Go-RrC" firstAttribute="leading" secondItem="nVm-9x-s45" secondAttribute="trailing" constant="49" id="vwG-hu-IQH"/>
                 <constraint firstItem="WSn-tt-7Kg" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" symbolic="YES" id="wpM-yL-uaY"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
@@ -63,6 +65,5 @@
     </objects>
     <resources>
         <image name="icon_category_-1" width="30" height="30"/>
-        <image name="icon_category_highlighted_-1" width="30" height="30"/>
     </resources>
 </document>
