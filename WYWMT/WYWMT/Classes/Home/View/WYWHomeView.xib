@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="WYWHomeNavView">
+            <rect key="frame" x="0.0" y="0.0" width="170" height="40"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nVm-9x-s45">
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="1" id="bhI-fY-aTV"/>
+                    </constraints>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WSn-tt-7Kg">
+                    <inset key="contentEdgeInsets" minX="5" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    <state key="normal" image="icon_category_-1"/>
+                    <state key="highlighted" image="icon_category_highlighted_-1"/>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="分类" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qZX-Go-RrC" userLabel="titleLabel">
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="子分类" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BeT-Mw-AHH">
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="WSn-tt-7Kg" secondAttribute="bottom" id="2Gk-W2-lSX"/>
+                <constraint firstItem="qZX-Go-RrC" firstAttribute="leading" secondItem="nVm-9x-s45" secondAttribute="trailing" constant="49" id="BBc-kA-ByQ"/>
+                <constraint firstAttribute="trailing" secondItem="qZX-Go-RrC" secondAttribute="trailing" id="DXy-Bs-IeY"/>
+                <constraint firstAttribute="bottom" secondItem="nVm-9x-s45" secondAttribute="bottom" constant="5" id="EV7-Dd-HVs"/>
+                <constraint firstItem="nVm-9x-s45" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="5" id="GPx-j1-NoP"/>
+                <constraint firstItem="qZX-Go-RrC" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Jzg-Dj-S1N"/>
+                <constraint firstAttribute="bottom" secondItem="BeT-Mw-AHH" secondAttribute="bottom" id="QfD-Jx-scC"/>
+                <constraint firstItem="nVm-9x-s45" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="5" id="S7B-Rc-k2f"/>
+                <constraint firstAttribute="trailing" secondItem="WSn-tt-7Kg" secondAttribute="trailing" id="dpD-RF-h51"/>
+                <constraint firstItem="qZX-Go-RrC" firstAttribute="height" secondItem="BeT-Mw-AHH" secondAttribute="height" id="eY9-k8-Gke"/>
+                <constraint firstAttribute="trailing" secondItem="BeT-Mw-AHH" secondAttribute="trailing" id="fHa-WL-IRe"/>
+                <constraint firstItem="qZX-Go-RrC" firstAttribute="width" secondItem="BeT-Mw-AHH" secondAttribute="width" id="fSc-kd-lsh"/>
+                <constraint firstItem="WSn-tt-7Kg" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="piu-5V-N3L"/>
+                <constraint firstItem="WSn-tt-7Kg" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" symbolic="YES" id="wpM-yL-uaY"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="navBtn" destination="WSn-tt-7Kg" id="ccj-m0-xuL"/>
+                <outlet property="subTitleLabel" destination="BeT-Mw-AHH" id="zi1-yq-0X4"/>
+                <outlet property="titleLabel" destination="qZX-Go-RrC" id="nmV-dd-nkY"/>
+            </connections>
+            <point key="canvasLocation" x="104" y="-203"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="icon_category_-1" width="30" height="30"/>
+        <image name="icon_category_highlighted_-1" width="30" height="30"/>
+    </resources>
+</document>

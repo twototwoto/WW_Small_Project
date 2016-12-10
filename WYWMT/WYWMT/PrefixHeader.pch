@@ -1,0 +1,59 @@
+//
+//  PrefixHeader.pch
+//  WYWMT
+//
+//  Created by 王永旺永旺 on 2016/12/9.
+//  Copyright © 2016年 ITCoderW. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+//宏定义
+#define WYWColor(r,g,b,a) [UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:a];
+
+
+
+//打印宏
+#ifdef DEBUG //在测试模式下使用自定义的打印
+#define WYWLog(fmt,...) fprintf(stderr,"%s:%d\t%s\n",[[[NSString stringWithUTF8String:__FILE__] lastPathComponent] UTF8String],__LINE__,[[NSString stringWithFormat:fmt,##VA_ARGS__] UTF8String])
+#else   //打包后应该注释日志以提高运行速度，但是每行去掉注释太麻烦，可以根据该宏在Release 模式下取消打印日志
+#define WYWLog(...)
+#endif
+//[[[NSString stringWithUTF8String:__FILE__]lastPathComponent]UTF8String];
+//
+//__LINE__
+//
+//[[NSString stringWithFormat:fmt,##VA_ARGS__] UTF8String]
+
+
+
+//在该宏中的内容只会被OC文件引用(XCode可以执行多种语法 .m .c .mm .cpp,如果c 和 C++ 文件引用了OC中的内容，就会出现语法冲突)
+#if __OBJC__
+//引用头文件
+#import <UIKit/UIKit.h>
+#import "UIView+HMCategory.h"
+#import "UIBarButtonItem+HMCategory.h"
+#endif
+
+
+
+#endif /* PrefixHeader_pch */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
