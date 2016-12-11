@@ -100,20 +100,28 @@ static NSString * const reuseIdentifier = @"Cell";
     WYWCategoryVC *categoryVc = [[WYWCategoryVC alloc]init];
     //设置modal类型 UIModalPresentationPopover
     categoryVc.modalPresentationStyle = UIModalPresentationPopover;
-    UIPopoverPresentationController *popC =  categoryVc.popoverPresentationController;
+    UIPopoverPresentationController *popover =  categoryVc.popoverPresentationController;
     //设置barButtonItem
-    popC.barButtonItem = self.navigationItem.leftBarButtonItems[1];
+    popover.barButtonItem = self.navigationItem.leftBarButtonItems[1];
+    //设置popover的大小
+    //WWAnnotation:当我们仅仅是在SB中设置好了popover的相应的视图之后的话还是存在问题的，我们需要进一步处理弹出来的控制器的大小
+//    categoryVc.preferredContentSize = CGSizeMake(350, 350);
+    
+    /**WWAnnotation:还有一点需要注意的是单单设置这里是起不到我们想要的结果的，因为这个里边的值的话需要做的处理是这个值的话popoverView此时还没有值，它的大小需要在更下边一行的代码出现了的时候才能知道，所以应该在给popoverView懒加载处理一下。
+    下边的代码将会先到popoverView的懒加载，
+     */
+    categoryVc.preferredContentSize = CGSizeMake(categoryVc.popoverView.size.width, categoryVc.popoverView.size.height);
     [self presentViewController:categoryVc animated:YES completion:nil];
     
 }
 #pragma mark - 点击地图的item
 -(void)clickMapItem{
-    NSLog(@"点击了地图的按钮");
+    WYWLog(@"点击了地图的按钮");
 }
 
 #pragma mark - 搜索框的方法实现
 - (void)clickSearchItem{
-    NSLog(@"点击了搜索框");
+    WYWLog(@"点击了搜索框");
 
 }
 

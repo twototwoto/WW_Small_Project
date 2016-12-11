@@ -10,6 +10,7 @@
 		21472E7B1DFC38A100DB8F76 /* WYWCategoryVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 21472E7A1DFC38A100DB8F76 /* WYWCategoryVC.m */; };
 		21472E7F1DFC38F100DB8F76 /* WYWPopoverView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 21472E7E1DFC38F100DB8F76 /* WYWPopoverView.xib */; };
 		21472E821DFC3AF600DB8F76 /* WYWPopoverView.m in Sources */ = {isa = PBXBuildFile; fileRef = 21472E811DFC3AF600DB8F76 /* WYWPopoverView.m */; };
+		21472E851DFC5B9800DB8F76 /* WYWCategoryModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 21472E841DFC5B9800DB8F76 /* WYWCategoryModel.m */; };
 		218F68441DFA454D00A0E88D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 218F68431DFA454D00A0E88D /* main.m */; };
 		218F68471DFA454D00A0E88D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 218F68461DFA454D00A0E88D /* AppDelegate.m */; };
 		218F686A1DFA566400A0E88D /* categories.plist in Resources */ = {isa = PBXBuildFile; fileRef = 218F68661DFA566400A0E88D /* categories.plist */; };
@@ -24,14 +25,18 @@
 		218F688B1DFAE4E500A0E88D /* WYWHomeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 218F688A1DFAE4E500A0E88D /* WYWHomeView.xib */; };
 		21CF952E1DFAF23E001FEC6D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 21CF952D1DFAF23E001FEC6D /* Assets.xcassets */; };
 		21CF95311DFAFB15001FEC6D /* WYWHomeNavView.m in Sources */ = {isa = PBXBuildFile; fileRef = 21CF95301DFAFB15001FEC6D /* WYWHomeNavView.m */; };
+		2B97A7FA8AD9379CFD12CEBE /* libPods-WYWMT.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DE22C15DF19C8495B6A3700 /* libPods-WYWMT.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		11565A3B5192589CD46841EB /* Pods-WYWMT.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WYWMT.release.xcconfig"; path = "Pods/Target Support Files/Pods-WYWMT/Pods-WYWMT.release.xcconfig"; sourceTree = "<group>"; };
 		21472E791DFC38A100DB8F76 /* WYWCategoryVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYWCategoryVC.h; sourceTree = "<group>"; };
 		21472E7A1DFC38A100DB8F76 /* WYWCategoryVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYWCategoryVC.m; sourceTree = "<group>"; };
 		21472E7E1DFC38F100DB8F76 /* WYWPopoverView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WYWPopoverView.xib; sourceTree = "<group>"; };
 		21472E801DFC3AF600DB8F76 /* WYWPopoverView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYWPopoverView.h; sourceTree = "<group>"; };
 		21472E811DFC3AF600DB8F76 /* WYWPopoverView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYWPopoverView.m; sourceTree = "<group>"; };
+		21472E831DFC5B9800DB8F76 /* WYWCategoryModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYWCategoryModel.h; sourceTree = "<group>"; };
+		21472E841DFC5B9800DB8F76 /* WYWCategoryModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYWCategoryModel.m; sourceTree = "<group>"; };
 		218F683F1DFA454C00A0E88D /* WYWMT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WYWMT.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		218F68431DFA454D00A0E88D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		218F68451DFA454D00A0E88D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -56,6 +61,8 @@
 		21CF952D1DFAF23E001FEC6D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		21CF952F1DFAFB15001FEC6D /* WYWHomeNavView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYWHomeNavView.h; sourceTree = "<group>"; };
 		21CF95301DFAFB15001FEC6D /* WYWHomeNavView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYWHomeNavView.m; sourceTree = "<group>"; };
+		2DE22C15DF19C8495B6A3700 /* libPods-WYWMT.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WYWMT.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6C48BF739174F9E3BA93E050 /* Pods-WYWMT.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WYWMT.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WYWMT/Pods-WYWMT.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,12 +70,21 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2B97A7FA8AD9379CFD12CEBE /* libPods-WYWMT.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		06CFCB9471DCBAC4C6208BF9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2DE22C15DF19C8495B6A3700 /* libPods-WYWMT.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		21472E741DFC383900DB8F76 /* Category */ = {
 			isa = PBXGroup;
 			children = (
@@ -91,6 +107,8 @@
 		21472E7C1DFC38B800DB8F76 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				21472E831DFC5B9800DB8F76 /* WYWCategoryModel.h */,
+				21472E841DFC5B9800DB8F76 /* WYWCategoryModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -110,6 +128,8 @@
 			children = (
 				218F68411DFA454C00A0E88D /* WYWMT */,
 				218F68401DFA454C00A0E88D /* Products */,
+				DA02C324D93093BE36D61BD0 /* Pods */,
+				06CFCB9471DCBAC4C6208BF9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -256,6 +276,15 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		DA02C324D93093BE36D61BD0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6C48BF739174F9E3BA93E050 /* Pods-WYWMT.debug.xcconfig */,
+				11565A3B5192589CD46841EB /* Pods-WYWMT.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -263,9 +292,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 218F68561DFA454D00A0E88D /* Build configuration list for PBXNativeTarget "WYWMT" */;
 			buildPhases = (
+				5B3AFF256E09BB27ACE3CC46 /* [CP] Check Pods Manifest.lock */,
 				218F683B1DFA454C00A0E88D /* Sources */,
 				218F683C1DFA454C00A0E88D /* Frameworks */,
 				218F683D1DFA454C00A0E88D /* Resources */,
+				BD85F01EE7F695A16C48E9F0 /* [CP] Embed Pods Frameworks */,
+				8D670CF9168E2672649F4268 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -327,6 +359,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		5B3AFF256E09BB27ACE3CC46 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		8D670CF9168E2672649F4268 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WYWMT/Pods-WYWMT-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BD85F01EE7F695A16C48E9F0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WYWMT/Pods-WYWMT-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		218F683B1DFA454C00A0E88D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -336,6 +416,7 @@
 				218F68851DFA7A7900A0E88D /* UIView+HMCategory.m in Sources */,
 				218F68831DFA7A7900A0E88D /* NSString+HMCategory.m in Sources */,
 				21CF95311DFAFB15001FEC6D /* WYWHomeNavView.m in Sources */,
+				21472E851DFC5B9800DB8F76 /* WYWCategoryModel.m in Sources */,
 				218F68471DFA454D00A0E88D /* AppDelegate.m in Sources */,
 				21472E7B1DFC38A100DB8F76 /* WYWCategoryVC.m in Sources */,
 				21472E821DFC3AF600DB8F76 /* WYWPopoverView.m in Sources */,
@@ -438,10 +519,12 @@
 		};
 		218F68571DFA454D00A0E88D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6C48BF739174F9E3BA93E050 /* Pods-WYWMT.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				GCC_PREFIX_HEADER = WYWMT/PrefixHeader.pch;
 				INFOPLIST_FILE = WYWMT/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cn.ITCoderW.WYWMT;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -451,10 +534,12 @@
 		};
 		218F68581DFA454D00A0E88D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 11565A3B5192589CD46841EB /* Pods-WYWMT.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				GCC_PREFIX_HEADER = WYWMT/PrefixHeader.pch;
 				INFOPLIST_FILE = WYWMT/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cn.ITCoderW.WYWMT;
 				PRODUCT_NAME = "$(TARGET_NAME)";

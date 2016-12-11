@@ -17,11 +17,9 @@
 //打印宏
 #ifdef DEBUG //在测试模式下使用自定义的打印
 
-//TODO:
-//WWAnnotation:有待修改的WYWLog
-//#define WYWLog(NSString * _Nonnull format, ...) fprintf(stderr,"%s:%d\t%s\n",[[[NSString stringWithUTF8String:__FILE__] lastPathComponent] UTF8String],__LINE__,[[NSString stringWithFormat:fmt,##VA_ARGS__] UTF8String])
 
-#define WYWLog(fmt,...) fprintf(stderr,"%s:%d\t%s\n",[[[NSString stringWithUTF8String:__FILE__] lastPathComponent] UTF8String],__LINE__,[[NSString stringWithFormat:fmt,##VA_ARGS__] UTF8String])
+//WWAnnotation:注意##__VA_ARGS__]别写错了，否则我们自己定义的这个宏就不能正常使用了
+#define WYWLog(fmt, ...)  fprintf(stderr,"%s:%d\t%s\n",[[[NSString stringWithUTF8String:__FILE__] lastPathComponent] UTF8String],__LINE__,[[NSString stringWithFormat:fmt,##__VA_ARGS__] UTF8String])
 #else   //打包后应该注释日志以提高运行速度，但是每行去掉注释太麻烦，可以根据该宏在Release 模式下取消打印日志
 #define WYWLog(...)
 #endif
@@ -36,9 +34,17 @@
 //在该宏中的内容只会被OC文件引用(XCode可以执行多种语法 .m .c .mm .cpp,如果c 和 C++ 文件引用了OC中的内容，就会出现语法冲突)
 #if __OBJC__
 //引用头文件
+//系统类库
 #import <UIKit/UIKit.h>
+
+//第三方类库
+#import <YYModel.h>
+
+//分类
 #import "UIView+HMCategory.h"
 #import "UIBarButtonItem+HMCategory.h"
+
+
 #endif
 
 
