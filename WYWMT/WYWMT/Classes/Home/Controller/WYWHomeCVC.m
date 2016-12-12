@@ -9,6 +9,7 @@
 #import "WYWHomeCVC.h"
 #import "WYWHomeNavView.h"
 #import "WYWCategoryVC.h"
+#import "WYWDistrictVC.h"
 
 @interface WYWHomeCVC ()
 
@@ -79,6 +80,8 @@ static NSString * const reuseIdentifier = @"Cell";
     districtView.iconName = @"icon_district";
     districtView.title = @"北京-全部";
     districtView.subTitle = nil;
+    //　给districtView添加事件处理
+    [districtView addTarget:self action:@selector(clickDistrictItem) forControlEvents:UIControlEventTouchUpInside];
     UIBarButtonItem *districtItem = [[UIBarButtonItem alloc]initWithCustomView:districtView];
     self.navigationItem.leftBarButtonItems = @[logoItem,categoryItem,districtItem];
     
@@ -113,6 +116,21 @@ static NSString * const reuseIdentifier = @"Cell";
     categoryVc.preferredContentSize = CGSizeMake(categoryVc.popoverView.size.width, categoryVc.popoverView.size.height);
     [self presentViewController:categoryVc animated:YES completion:nil];
     
+}
+
+#pragma mark - 处理点击了区域之后的方法
+- (void)clickDistrictItem{
+    WYWLog(@"点击了区域按钮");
+   
+//    categoryVc.preferredContentSize = CGSizeMake(categoryVc.popoverView.size.width, categoryVc.popoverView.size.height);
+    
+    WYWDistrictVC *districtVC = [[WYWDistrictVC alloc]init];
+    //设置modal类型  UIModalPresentationPopover
+    districtVC.modalPresentationStyle = UIModalPresentationPopover;
+    UIPopoverPresentationController *popover = districtVC.popoverPresentationController;
+    popover.barButtonItem = self.navigationItem.leftBarButtonItems[2];
+    [self presentViewController:districtVC animated:YES completion:nil];
+
 }
 #pragma mark - 点击地图的item
 -(void)clickMapItem{

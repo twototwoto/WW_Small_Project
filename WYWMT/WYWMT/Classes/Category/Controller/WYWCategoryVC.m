@@ -136,6 +136,8 @@ static NSString *rightTableCell = @"rightTableCell";
      
      */
     UITableViewCell *cell;
+    tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    [tableView setSeparatorInset:UIEdgeInsetsZero];
     if(tableView == self.popoverView.leftTable)
     
     {
@@ -144,16 +146,35 @@ static NSString *rightTableCell = @"rightTableCell";
         if(cell == nil){
             
             cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:leftTableCell];
+            cell.selectedBackgroundView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"bg_dropdown_left_selected"]];
+            cell.backgroundView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"bg_dropdown_left"]];
 //        cell.textLabel.text = self.categoryArr[indexPath.row].name;
         }
         //WWAnnotation: 注意下边的赋值一定要放对了位置，否则数据的显示就出问题了
         cell.textLabel.text = self.categoryArr[indexPath.row].name;
+        cell.imageView.image = [UIImage imageNamed:self.categoryArr[indexPath.row].icon];
+        cell.imageView.highlightedImage = [UIImage imageNamed:self.categoryArr[indexPath.row].highlighted_icon];
+        
+        //设置箭头 当有子分类的时候是有箭头的 没有子分类的时候的话就是没有箭头的
+        if(self.categoryArr[indexPath.row].subcategories){
+            cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+        }else{
+            cell.accessoryType = UITableViewCellAccessoryNone;
+        }
+        
+        
     }
     else{
         cell = [tableView dequeueReusableCellWithIdentifier:rightTableCell];
         if(cell == nil){
             
             cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:rightTableCell];
+            
+            //设置分割线
+            cell.backgroundView =  [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"bg_dropdown_rightpart"]];
+            
+            cell.selectedBackgroundView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"bg_dropdown_right_selected"]];
+           
             
 //            cell.textLabel.text = self.categoryArr[_currentIndex].subcategories[indexPath.row];
         }

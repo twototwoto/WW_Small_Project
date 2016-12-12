@@ -11,6 +11,8 @@
 		21472E7F1DFC38F100DB8F76 /* WYWPopoverView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 21472E7E1DFC38F100DB8F76 /* WYWPopoverView.xib */; };
 		21472E821DFC3AF600DB8F76 /* WYWPopoverView.m in Sources */ = {isa = PBXBuildFile; fileRef = 21472E811DFC3AF600DB8F76 /* WYWPopoverView.m */; };
 		21472E851DFC5B9800DB8F76 /* WYWCategoryModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 21472E841DFC5B9800DB8F76 /* WYWCategoryModel.m */; };
+		21750CAE1DFEE46400B0391D /* WYWDistrictVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 21750CAD1DFEE46400B0391D /* WYWDistrictVC.m */; };
+		21750CB01DFEE47D00B0391D /* View.xib in Resources */ = {isa = PBXBuildFile; fileRef = 21750CAF1DFEE47D00B0391D /* View.xib */; };
 		218F68441DFA454D00A0E88D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 218F68431DFA454D00A0E88D /* main.m */; };
 		218F68471DFA454D00A0E88D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 218F68461DFA454D00A0E88D /* AppDelegate.m */; };
 		218F686A1DFA566400A0E88D /* categories.plist in Resources */ = {isa = PBXBuildFile; fileRef = 218F68661DFA566400A0E88D /* categories.plist */; };
@@ -37,6 +39,9 @@
 		21472E811DFC3AF600DB8F76 /* WYWPopoverView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYWPopoverView.m; sourceTree = "<group>"; };
 		21472E831DFC5B9800DB8F76 /* WYWCategoryModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYWCategoryModel.h; sourceTree = "<group>"; };
 		21472E841DFC5B9800DB8F76 /* WYWCategoryModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYWCategoryModel.m; sourceTree = "<group>"; };
+		21750CAC1DFEE46400B0391D /* WYWDistrictVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYWDistrictVC.h; sourceTree = "<group>"; };
+		21750CAD1DFEE46400B0391D /* WYWDistrictVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYWDistrictVC.m; sourceTree = "<group>"; };
+		21750CAF1DFEE47D00B0391D /* View.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = View.xib; sourceTree = "<group>"; };
 		218F683F1DFA454C00A0E88D /* WYWMT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WYWMT.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		218F68431DFA454D00A0E88D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		218F68451DFA454D00A0E88D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -123,6 +128,40 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		21750CA81DFEE44B00B0391D /* DIstrict */ = {
+			isa = PBXGroup;
+			children = (
+				21750CA91DFEE44B00B0391D /* Controller */,
+				21750CAA1DFEE44B00B0391D /* Model */,
+				21750CAB1DFEE44B00B0391D /* View */,
+			);
+			path = DIstrict;
+			sourceTree = "<group>";
+		};
+		21750CA91DFEE44B00B0391D /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				21750CAC1DFEE46400B0391D /* WYWDistrictVC.h */,
+				21750CAD1DFEE46400B0391D /* WYWDistrictVC.m */,
+				21750CAF1DFEE47D00B0391D /* View.xib */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		21750CAA1DFEE44B00B0391D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		21750CAB1DFEE44B00B0391D /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		218F68361DFA454C00A0E88D = {
 			isa = PBXGroup;
 			children = (
@@ -178,6 +217,7 @@
 		218F686E1DFA76DB00A0E88D /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				21750CA81DFEE44B00B0391D /* DIstrict */,
 				21472E741DFC383900DB8F76 /* Category */,
 				218F686F1DFA76DB00A0E88D /* Home */,
 				218F68731DFA76DB00A0E88D /* Main */,
@@ -351,6 +391,7 @@
 				218F686A1DFA566400A0E88D /* categories.plist in Resources */,
 				218F686D1DFA566400A0E88D /* sorts.plist in Resources */,
 				218F688B1DFAE4E500A0E88D /* WYWHomeView.xib in Resources */,
+				21750CB01DFEE47D00B0391D /* View.xib in Resources */,
 				21CF952E1DFAF23E001FEC6D /* Assets.xcassets in Resources */,
 				218F686C1DFA566400A0E88D /* cityGroups.plist in Resources */,
 				21472E7F1DFC38F100DB8F76 /* WYWPopoverView.xib in Resources */,
@@ -416,6 +457,7 @@
 				218F68851DFA7A7900A0E88D /* UIView+HMCategory.m in Sources */,
 				218F68831DFA7A7900A0E88D /* NSString+HMCategory.m in Sources */,
 				21CF95311DFAFB15001FEC6D /* WYWHomeNavView.m in Sources */,
+				21750CAE1DFEE46400B0391D /* WYWDistrictVC.m in Sources */,
 				21472E851DFC5B9800DB8F76 /* WYWCategoryModel.m in Sources */,
 				218F68471DFA454D00A0E88D /* AppDelegate.m in Sources */,
 				21472E7B1DFC38A100DB8F76 /* WYWCategoryVC.m in Sources */,
