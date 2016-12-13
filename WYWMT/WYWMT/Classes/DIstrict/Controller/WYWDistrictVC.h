@@ -7,7 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "WYWPopoverView.h"
+#import "WYWDistrictModel.h"
 
 @interface WYWDistrictVC : UIViewController
+@property (nonatomic,strong) WYWPopoverView *popoverView;
+
+
+/**
+ 区域数据
+ */
+@property (nonatomic,strong) NSArray<WYWDistrictModel *> *districts;
 
 @end

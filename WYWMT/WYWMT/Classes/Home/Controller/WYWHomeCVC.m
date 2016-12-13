@@ -10,9 +10,21 @@
 #import "WYWHomeNavView.h"
 #import "WYWCategoryVC.h"
 #import "WYWDistrictVC.h"
+#import "WYWCityModel.h"
 
 @interface WYWHomeCVC ()
 
+
+/**
+ 当前城市
+ */
+@property(nonatomic,copy) NSString *currentCityName;
+
+
+/**
+ 所有城市
+ */
+@property (nonatomic,strong) NSArray *allCities;
 @end
 
 @implementation WYWHomeCVC
@@ -129,6 +141,24 @@ static NSString * const reuseIdentifier = @"Cell";
     districtVC.modalPresentationStyle = UIModalPresentationPopover;
     UIPopoverPresentationController *popover = districtVC.popoverPresentationController;
     popover.barButtonItem = self.navigationItem.leftBarButtonItems[2];
+    // FIXME: 这里的这个MaxY的获取存在问题
+    //设置popover的大小  它的尺寸 就宽度来没问题  就高度来说的话需要注意的是这个得到这个popoverView的frame里边的最大Y
+//    districtVC.preferredContentSize = CGSizeMake(districtVC.popoverView.width, CGRectGetMaxY(districtVC.popoverView.frame));
+    
+//     districtVC.preferredContentSize = CGSizeMake(districtVC.popoverView.width, 350);
+    //MARK: - 注意这个地方的高度需要给够了，否则的话底部数据在滚动的时候是不能够显示出来的
+        districtVC.preferredContentSize = CGSizeMake(districtVC.popoverView.width, 390);
+    WYWLog(@"%f",CGRectGetMaxY(districtVC.popoverView.frame));
+    
+    for (WYWCityModel *city in self.allCities) {
+        
+        //判断是否是当前城市
+//        if([city.name isEqualToString:_currentCityName]){
+        if([city.name isEqualToString: self.currentCityName]){
+            //取出当前城市的区域数据，传递给区域控制器
+            districtVC.districts = city.districts;
+        }
+    }
     [self presentViewController:districtVC animated:YES completion:nil];
 
 }
@@ -197,5 +227,25 @@ static NSString * const reuseIdentifier = @"Cell";
 	
 }
 */
+
+
+#pragma mark - 懒加载
+- (NSString *)currentCityName{
+    if(_currentCityName == nil){
+        _currentCityName = @"北京";
+    }
+    return _currentCityName;
+}
+
+- (NSArray *)allCities{
+    if(_allCities == nil){
+        
+        //获取当前视图的区域视图  cities.plist
+        NSArray *cityArr = [NSArray arrayWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"cities.plist" ofType:nil]];
+        _allCities = [NSArray yy_modelArrayWithClass:[WYWCityModel class] json:cityArr];
+        
+    }
+    return _allCities;
+}
 
 @end

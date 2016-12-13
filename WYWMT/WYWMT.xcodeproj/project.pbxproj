@@ -25,6 +25,8 @@
 		218F68841DFA7A7900A0E88D /* UIBarButtonItem+HMCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 218F68801DFA7A7900A0E88D /* UIBarButtonItem+HMCategory.m */; };
 		218F68851DFA7A7900A0E88D /* UIView+HMCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 218F68821DFA7A7900A0E88D /* UIView+HMCategory.m */; };
 		218F688B1DFAE4E500A0E88D /* WYWHomeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 218F688A1DFAE4E500A0E88D /* WYWHomeView.xib */; };
+		21B6600C1DFFEFDB00216E58 /* WYWDistrictModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 21B6600B1DFFEFDB00216E58 /* WYWDistrictModel.m */; };
+		21B6600F1DFFF7E400216E58 /* WYWCityModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 21B6600E1DFFF7E400216E58 /* WYWCityModel.m */; };
 		21CF952E1DFAF23E001FEC6D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 21CF952D1DFAF23E001FEC6D /* Assets.xcassets */; };
 		21CF95311DFAFB15001FEC6D /* WYWHomeNavView.m in Sources */ = {isa = PBXBuildFile; fileRef = 21CF95301DFAFB15001FEC6D /* WYWHomeNavView.m */; };
 		2B97A7FA8AD9379CFD12CEBE /* libPods-WYWMT.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DE22C15DF19C8495B6A3700 /* libPods-WYWMT.a */; };
@@ -63,6 +65,10 @@
 		218F68811DFA7A7900A0E88D /* UIView+HMCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+HMCategory.h"; path = "../UIView+HMCategory.h"; sourceTree = "<group>"; };
 		218F68821DFA7A7900A0E88D /* UIView+HMCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+HMCategory.m"; path = "../UIView+HMCategory.m"; sourceTree = "<group>"; };
 		218F688A1DFAE4E500A0E88D /* WYWHomeView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WYWHomeView.xib; sourceTree = "<group>"; };
+		21B6600A1DFFEFDB00216E58 /* WYWDistrictModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYWDistrictModel.h; sourceTree = "<group>"; };
+		21B6600B1DFFEFDB00216E58 /* WYWDistrictModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYWDistrictModel.m; sourceTree = "<group>"; };
+		21B6600D1DFFF7E400216E58 /* WYWCityModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYWCityModel.h; sourceTree = "<group>"; };
+		21B6600E1DFFF7E400216E58 /* WYWCityModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYWCityModel.m; sourceTree = "<group>"; };
 		21CF952D1DFAF23E001FEC6D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		21CF952F1DFAFB15001FEC6D /* WYWHomeNavView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYWHomeNavView.h; sourceTree = "<group>"; };
 		21CF95301DFAFB15001FEC6D /* WYWHomeNavView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYWHomeNavView.m; sourceTree = "<group>"; };
@@ -151,6 +157,8 @@
 		21750CAA1DFEE44B00B0391D /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				21B6600A1DFFEFDB00216E58 /* WYWDistrictModel.h */,
+				21B6600B1DFFEFDB00216E58 /* WYWDistrictModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -302,6 +310,8 @@
 		218F68861DFAE3AA00A0E88D /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				21B6600D1DFFF7E400216E58 /* WYWCityModel.h */,
+				21B6600E1DFFF7E400216E58 /* WYWCityModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -453,7 +463,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				21B6600F1DFFF7E400216E58 /* WYWCityModel.m in Sources */,
 				218F68791DFA76DB00A0E88D /* WYWHomeCVC.m in Sources */,
+				21B6600C1DFFEFDB00216E58 /* WYWDistrictModel.m in Sources */,
 				218F68851DFA7A7900A0E88D /* UIView+HMCategory.m in Sources */,
 				218F68831DFA7A7900A0E88D /* NSString+HMCategory.m in Sources */,
 				21CF95311DFAFB15001FEC6D /* WYWHomeNavView.m in Sources */,
@@ -564,6 +576,7 @@
 			baseConfigurationReference = 6C48BF739174F9E3BA93E050 /* Pods-WYWMT.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PREFIX_HEADER = WYWMT/PrefixHeader.pch;
 				INFOPLIST_FILE = WYWMT/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -579,6 +592,7 @@
 			baseConfigurationReference = 11565A3B5192589CD46841EB /* Pods-WYWMT.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PREFIX_HEADER = WYWMT/PrefixHeader.pch;
 				INFOPLIST_FILE = WYWMT/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
